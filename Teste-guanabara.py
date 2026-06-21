@@ -137,3 +137,64 @@ custa R$60,00 por dia e R$0,15 por Km rodado'''
 km = float(input('Quantos Km rodados? '))
 pago = (dias * 60) + (km * 0.15)
 print(f'O total a pagar é de R${pago:.2f}')'''
+
+# exercicio 16
+'''Crie um programa que leia um número Real qualquer pelo teclado e mostre na tela a sua porçao inteira.
+Ex.: Digite um número: 6.127
+O número 6.127 tem a parte inteira 6.'''
+
+'''from math import trunc
+n = float(input('Digite um valor: '))
+print(f'O valor digitado foi {n} e sua parte inteira é {trunc(n)}.')'''
+
+# exercicio 17
+'''Faça um programa que leia o comprimento do
+cateto oposto e do cateto adjacente de um
+triângulo retângulo, calcule e mostre o comprimento da hipotenusa.'''
+
+'''from math import hypot
+co = float(input('Digite o comprimento do cateto oposto: '))
+ca = float(input('Digite o comprimento do cateto adjacente: '))
+print(f'A hipotenusa vai medir {hypot(co, ca):.2f}')'''
+
+# exercicio 18
+'''Faça um programa que leia um ângulo qualquer e
+mostre na tela o valor do seno, cosseno e tangente
+desse ângulo.'''
+
+'''from math import radians, sin, cos, tan
+an = float(input('Digite o ângulo que você deseja: '))
+seno = sin(radians(an))
+coss = cos(radians(an))
+tang = tan(radians(an))
+print(f'O ângulo de {an} tem o SENO de {seno:.2f}')
+print(f'O ângulo de {an} tem o COSSENO de {coss:.2f}')
+print(f'O ângulo de {an} te a TANGENTE de {tang:.2f}')'''
+
+# exercicio 19
+'''Um professor quer sortear um dos seus quatro alunos para apagar
+o quadro. Faça um programa que ajude ele, lendo o nome deles e
+escrevendo o nome escolhido.'''
+
+'''from random import choice
+n1 = str(input('Primeiro aluno: '))
+n2 = str(input('Segundo aluno: '))
+n3 = str(input('Terceiro aluno: '))
+n4 = str(input('Quarto aluno: '))
+lista = [n1, n2, n3, n4]
+
+print(f'O aluno escolhido foi {choice(lista)}')'''
+
+# exercicio 20
+'''O mesmo professor do desafio anterior quer sortear a ordem de
+apresentação de trabalhos dos alunos. Faça um programa que leia 
+o nome dos quatro alunos e mostre a ordem selecionada.'''
+
+'''from random import shuffle
+n1 = str(input('Primeiro aluno: '))
+n2 = str(input('Segundo aluno: '))
+n3 = str(input('Terceiro aluno: '))
+n4 = str(input('Quarto aluno: '))
+lista = [n1, n2, n3, n4]
+shuffle(lista)
+print(f'A ordem de apresentação sera {lista}')'''
