@@ -198,3 +198,16 @@ n4 = str(input('Quarto aluno: '))
 lista = [n1, n2, n3, n4]
 shuffle(lista)
 print(f'A ordem de apresentação sera {lista}')'''
+
+# exercicio 22
+'''Crie um programa que leia o nome completo de uma pessoa e
+mostre:
+O nome com todas as letras maiúsculas e minusculas.
+Quantas letras ao todo o nome tem (sem considerar espaços).
+Quantas letras tem o primeiro nome.'''
+
+'''nome = str(input('Digite o seu nome completo: ')).strip()
+print(f'Analisando seu nome...')
+print(f'Seu nome em maiúsculas é {nome.upper()}')
+print(f'Seu nome em minuscúlas é {nome.lower()}')
+print(f'Seu nome tem ao todo {len(nome) - nome.count(' ')} letras')'''
