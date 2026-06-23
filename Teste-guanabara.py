@@ -211,3 +211,29 @@ print(f'Analisando seu nome...')
 print(f'Seu nome em maiúsculas é {nome.upper()}')
 print(f'Seu nome em minuscúlas é {nome.lower()}')
 print(f'Seu nome tem ao todo {len(nome) - nome.count(' ')} letras')'''
+
+# exercicio 23
+'''Faça um rpograma que leia um número de 0 a 9999 e mostre na tela
+cada um dos seus digitos serparados.
+ex.:
+Digite um número: 1234
+unidade: 4  dezena: 3  centena: 2  milhar: 1'''
+
+'''n = int(input('Digite um número: '))
+u = n // 1 % 10
+d = n // 10 % 10
+c = n // 100 % 10
+m = n // 1000 % 10
+print(f'Analisando o número {n}')
+print(f'Unidade: {u}')
+print(f'Dezena: {d}')
+print(f'Centena: {c}')
+print(f'Milhar: {m}')'''
+
+# exercicio 24
+'''Crie um programa que leia o nome de uma cidade e diga se ela
+começa ou não com o nome 'SANTO' '''
+
+'''c = str(input('Em que cidade você nasceu? ')).strip()
+print(c[:5].upper() == 'SANTO')'''
+
