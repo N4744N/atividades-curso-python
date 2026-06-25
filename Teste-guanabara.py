@@ -237,3 +237,33 @@ começa ou não com o nome 'SANTO' '''
 '''c = str(input('Em que cidade você nasceu? ')).strip()
 print(c[:5].upper() == 'SANTO')'''
 
+# exercicio 25
+'''Crie um programa que leia o nome de uma pessoa e diga se ela tem
+"SILVA" no nome.'''
+
+'''nome = str(input('Qual é o seu nome completo? ')).strip()
+print(f'Seu nome tem Silva? {'SILVA' in nome.upper()}')'''
+
+# exercicio 26
+'''Faça um programa que leia uma frase pelo teclado e mostre:
+Quantas vezes aparece a letra "a".
+Em que posição ela aparece a primeira vez.
+Em que posição ela aparece a última vez.'''
+
+'''frase = str(input('Digite uma frase: ')).strip().upper()
+print(f'A letra A aparece {frase.count('A')} vezes na frase.')
+print(f'A primeira letra A apareceu na posição {frase.find('A')+1}')
+print(f'A ultima letra A apareceu na posição {frase.rfind('A')+1}')'''
+
+# exercicio 27
+'''Faça um programa que leia o nome completo de uma pessoa,
+mostrando um seguida o primeiro e o último nome separadamente.
+Ex.: Ana Maria de Souza
+Primeiro: Ana
+Último: Souza'''
+
+'''nome = str(input('Digite seu nome completo: ')).strip()
+n = nome.split()
+print(f'Satisfação em te conhecer {nome}!')
+print(f'Seu primeiro nome é {n[0]}')
+print(f'Seu último nome é {n[len(n)-1]}')'''
