@@ -268,3 +268,37 @@ print(f'Satisfação em te conhecer {nome}!')
 print(f'Seu primeiro nome é {n[0]}')
 print(f'Seu último nome é {n[-1]}')'''
 
+#AULA 10 EXEMPLOS:
+'''nome = str(input('Qual é o seu nome? ')).strip()
+if nome == 'Nathan':
+    print('Que nome lindo você tem!')
+else:
+    print('Seu nome é tão normal...')
+print(f'Bom dia, {nome}!')'''
+
+'''n1 = float(input('Digite a primeira nota: '))
+n2 = float(input('Digite a segunda nota: '))
+m = (n1 + n2) / 2
+print(f'A sua média foi {m}')
+if m >= 6.0:
+    print('A sua média foi boa, você passou de ano PARABÉNS!!!')
+else:
+    print('A sua média foi ruim, infelizmente você reprovou, ESTUDE MAIS ANO QUE VEM!!!')'''
+
+# exercicio 28
+'''Escreva um programa que faça o computador ''pensar'' em um número
+inteiro entre 0 e 5 e peça para o usuário descobrir qual foi o número
+escolhido pelo computador. O programa deverá escrever na tela se o 
+usuário venceu ou perdeu.'''
+
+'''from random import randint
+num = randint(0, 5)
+print('_' * 20)
+print('Pensei em um número de 0 a 5, tente adivinhar...')
+print('_' * 20)
+p = int(input('Em que número eu pensei? '))
+if p == num:
+    print('Como você fez isso??? ACERTOU!')
+    print('Ninguem nunca conseguiu, estranho...')
+else:
+    print('HAHAHAHA, VOCÊ É MAIS UM QUE ERROU!!!')'''
