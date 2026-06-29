@@ -266,4 +266,5 @@ Primeiro: Ana
 n = nome.split()
 print(f'Satisfação em te conhecer {nome}!')
 print(f'Seu primeiro nome é {n[0]}')
-print(f'Seu último nome é {n[len(n)-1]}')'''
+print(f'Seu último nome é {n[-1]}')'''
+
