@@ -302,3 +302,27 @@ if p == num:
     print('Ninguem nunca conseguiu, estranho...')
 else:
     print('HAHAHAHA, VOCÊ É MAIS UM QUE ERROU!!!')'''
+
+# exercicio 29
+'''Escreva um programa que leia a velocidade de um carro.
+Se ele ultrapassar 80Km/h, mostre uma mensagem
+dizendo que ele foi multado.
+A multa vai custar R$7,00 por cada Km acima do limite.'''
+
+'''velocidade = int(input('Qual a velocidade do carro? '))
+multa = (velocidade-80) * 7
+if velocidade > 80:
+    print(f'Você estava acima de 80Km/h por isso vai receber uma multa de R${multa:.2f}!')
+else:
+    print('Você esta dentro do limite de velocidade, continue assim!')'''
+
+# exercicio 30
+'''Crie um programa que leia um número inteiro
+e mostre na tela se ele é PAR ou ÍMPAR.'''
+
+'''num = int(input('Digite um número inteiro: '))
+r = num % 2
+if r == 0:
+    print(f'O número {num} é par.')
+else:
+    print(f'O número {num} é impar.')'''
