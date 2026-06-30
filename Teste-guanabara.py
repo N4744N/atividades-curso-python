@@ -381,8 +381,8 @@ calcule o valor do seu aumento.
 Para salários superiores a R$1.250,00, calcule um aumento de 10%.
 Para inferiores ou iguais, o aumento é de 15%'''
 
-s = float(input('Quanto o funcionario ganha? '))
+'''s = float(input('Quanto o funcionario ganha? '))
 if s <= 1250:
     print(f'O funcionario que ganha R${s:.2f} ira ganhar R${(s / 100) * 15 + s:.2f}')
 else:
-    print(f'O funcionario que ganha R${s:.2f} ira ganhar R${(s / 100) * 10 + s:.2f}')
+    print(f'O funcionario que ganha R${s:.2f} ira ganhar R${(s / 100) * 10 + s:.2f}')'''
