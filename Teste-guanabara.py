@@ -326,3 +326,63 @@ if r == 0:
     print(f'O número {num} é par.')
 else:
     print(f'O número {num} é impar.')'''
+
+# exercicio 31
+'''Desenvolva um programa que pergunte a distância de uma viagem
+em Km. Calcule o preço da passagem, cobrando R$0,50 por Km para
+viagens de até 200Km e R$0,45 para viagens mais longas.'''
+
+'''km = float(input('Quantos Km serão percorridos? '))
+preço1 = 0.50 * km
+preço2 = 0.45 * km
+if km <= 200:
+    print(f'Para {km}km, sera cobrado R${preço1:.2f} sem a promoção.')
+else:
+    print(f'Para {km}km, sera cobrado R${preço2:.2f} com o valor promocional. ')'''
+
+# exercicio 32
+'''Faça um programa que leia um ano qualquer
+e mostre se ele é bissexto.'''
+
+'''from datetime import date
+ano = int(input('Que ano quer analisar? '))
+if ano == 0:
+    ano = date.today().year
+if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+    print(f'O ano {ano} é bissexto.')
+else:
+    print(f'O ano {ano} não é bissexto.')'''
+
+# exercicio 33
+'''Faça um programa que leia 3 números e
+mostre qual é o maior e o menor.'''
+
+'''n1 = int(input('Digite o primeiro valor: '))
+n2 = int(input('Digite o segundo valor: '))
+n3 = int(input('Digite o terceiro valor: '))
+menor = n1
+if n2 < n1 and n2 < n3:
+    menor = n2
+if n3 < n1 and n3 < n2:
+    menor = n3
+
+maior = n1
+if n2 > n1 and n2 > n3:
+    maior = n2
+if n3 > n1 and n3 > n2:
+    maior = n3
+
+print(f'O maior é {maior}')
+print(f'O menor é {menor}')'''
+
+# exercicio 34
+'''Escreva um programa que pergunte o salário de um funcionário e
+calcule o valor do seu aumento.
+Para salários superiores a R$1.250,00, calcule um aumento de 10%.
+Para inferiores ou iguais, o aumento é de 15%'''
+
+s = float(input('Quanto o funcionario ganha? '))
+if s <= 1250:
+    print(f'O funcionario que ganha R${s:.2f} ira ganhar R${(s / 100) * 15 + s:.2f}')
+else:
+    print(f'O funcionario que ganha R${s:.2f} ira ganhar R${(s / 100) * 10 + s:.2f}')
