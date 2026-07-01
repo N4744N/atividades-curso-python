@@ -386,3 +386,17 @@ if s <= 1250:
     print(f'O funcionario que ganha R${s:.2f} ira ganhar R${(s / 100) * 15 + s:.2f}')
 else:
     print(f'O funcionario que ganha R${s:.2f} ira ganhar R${(s / 100) * 10 + s:.2f}')'''
+
+# exercicio 35
+'''Desenvolva um programa que leia o comprimento
+de três retas e diga ao usuário se elas podem ou
+não formar um triângulo.'''
+
+'''r1 = float(input('Primeira reta: '))
+r2 = float(input('Segunda reta: '))
+r3 = float(input('Terceira reta: '))
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r2 + r2:
+    print('As retas acima formam um triâgulo.')
+else:
+    print('As retas acima não formam um triângulo.')'''
+
