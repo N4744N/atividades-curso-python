@@ -400,3 +400,11 @@ if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r2 + r2:
 else:
     print('As retas acima não formam um triângulo.')'''
 
+## Aula 11
+'''Como trabalhar com cores no terminal
+exemplos:'''
+
+print('\033[1;31;43mOla, mundo!\033[m')# colocar "\033[m" para abrir e para fechar
+'''formatações de estilo: 0 (normal); 1 (negrito); 4 (sublinhado); 7 (inverte texto e fundo).
+formatações da cor do texto: 30 (branco); 31 (vermelho); 32 (verde); 33 (amarelo); 34 (azul); 35 (roxo); 36 (ciano) 37 (cinza).
+formatações da cor do fundo: 40 (branco); 41 (vermelho); 42 (verde); 33 (amarelo); 44 (azul); 45 (roxo); 46 (ciano) 47 (cinza).'''
