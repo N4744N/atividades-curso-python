@@ -395,7 +395,7 @@ não formar um triângulo.'''
 '''r1 = float(input('Primeira reta: '))
 r2 = float(input('Segunda reta: '))
 r3 = float(input('Terceira reta: '))
-if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r2 + r2:
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
     print('As retas acima formam um triâgulo.')
 else:
     print('As retas acima não formam um triângulo.')'''
@@ -404,7 +404,218 @@ else:
 '''Como trabalhar com cores no terminal
 exemplos:'''
 
-print('\033[1;31;43mOla, mundo!\033[m')# colocar "\033[m" para abrir e para fechar
+# print('\033[1;31;43mOla, mundo!\033[m')# colocar "\033[m" para abrir e para fechar
 '''formatações de estilo: 0 (normal); 1 (negrito); 4 (sublinhado); 7 (inverte texto e fundo).
 formatações da cor do texto: 30 (branco); 31 (vermelho); 32 (verde); 33 (amarelo); 34 (azul); 35 (roxo); 36 (ciano) 37 (cinza).
 formatações da cor do fundo: 40 (branco); 41 (vermelho); 42 (verde); 33 (amarelo); 44 (azul); 45 (roxo); 46 (ciano) 47 (cinza).'''
+
+## Aula 12
+# exemplos:
+
+'''nome = str(input('Qual é o seu nome? ')).strip()
+if nome.upper() == 'NATHAN':
+    print('Que nome bonito!')
+elif nome.upper() == 'PEDRO' or nome.upper() == 'MARIA' or nome.upper() == 'PAULO':
+    print('Seu nome não é tão bonito mas é bem popular no Brasil!')
+else:
+    print('Seu nome é bem normal...')
+print(f'Tenha um bom dia, {nome.capitalize()}!')'''
+
+# exercicio 36
+'''Escreva um programa para aprovar o empréstimo bancario para a compra
+de uma casa. O programa vai perguntar o valor da casa, o salário do comprador
+e em quantos anos ele vai pagar.
+Calcule o valor da prestação mensal, sabendo que ela não pode exceder 30% do 
+salário ou então o empréstimo será negado.'''
+
+'''casa = float(input('Qual o valor da casa? '))
+salario = float(input('Qual o seu salário? '))
+anos = int(input('Em quantos anos você quer pagar? ')) * 12
+
+prestacao = casa / anos
+
+if prestacao <= ((salario / 100) * 30):
+    print(f'Seu emprestimo foi aprovado, parabéns! O valor da parcela ficou em R${prestacao:.2f} por mês.')
+else:
+    print('Infelizmente o seu empréstimo não foi aprovado.')'''
+
+# exercicio 37
+
+'''Escreva um programa que leia um número inteiro qualquer
+e peça para o usuário escolher qual será a base de conversão:
+
+- 1 para binário
+- 2 para octal
+- 3 para hexadecimal'''
+
+'''num = int(input('Digite um número: '))
+print('Para converter o número para binaro digite 1.')
+print('Para converter para octal, digite 2.')
+print('Para converter para hexadecimal, digite 3.')
+n = int(input('Digite a opção desejada: '))
+
+binario = bin(num)[2:]
+octal = oct(num)[2:]
+hexadecimal = hex(num)[2:]
+
+if num < 0:
+    print('Um número positivo por favor!')
+elif n == 1:
+    print(f'{num} em binario é: {binario}')
+elif n == 2:
+    print(f'{num} em octal é: {octal}')
+elif n == 3:
+    print(f'{num} em hexadecimal é: {hexadecimal}')'''
+
+# exercicio 38
+'''Escreva um programa que leia dois números inteiros e compare-os,
+mostrando na tela uma mensagem:
+- O primeiro valor é maior
+- O segundo valor é maior
+- Não existe valor maior, os dois são iguais'''
+
+'''n1 = float(input('Digite o primeiro valor: '))
+n2 = float(input('Digite o segundo valor: '))
+
+if n1 == n2:
+    print('Não existe valor maior, os dois são iguais')
+elif n1 > n2:
+    print('O primeiro valor é maior')
+else:
+    print('O segundo valor é maior')'''
+
+# exercicio 39
+'''Faça um programa que leia o ano de nascimento de um jovem e informe,
+de acordo com sua idade, se ele ainda vai se alistar ao serviço militar,
+se é a hora de se alistar ou se ja passou do tempo do alistamento.
+Seu programa também deverá mostrar o tempo que falta ou que passou do prazo.'''
+
+'''anos = int(input('Quantos anos você tem? '))
+if anos < 18:
+    print(f'Ainda faltam {18 - anos} anos para você se alistar!')
+    exit()
+while True:
+    alistou = str(input('Você ja se alistou para o exercito? ')).strip().upper()
+    if alistou in ['SIM', 'NÃO', 'NAO']:
+        break
+    else:
+        print('Resposta inválida! Por favor, responda apenas com sim ou não. ') 
+if anos >= 18 and alistou == 'SIM':
+    print('Parabens, você esta em dia com suas obrigações de cidadão!')
+elif anos == 18 and alistou == 'NÃO' or 'NAO':
+    print('Você precisa se alistar esse ano!')
+elif anos > 18 and alistou == 'NÃO' or 'NAO':
+    print(f'Você ainda precisa se alistar, você esta atrasado {anos - 18} anos!')'''
+
+# exercicio 40
+'''Crie um programa que leia duas notas de um aluno e calcule sua média,
+mostrando uma mensagem no final,  de acordo com a média atingida:
+- Média abaixo de 5.0: REPROVADO
+- Média entre 5.0 e 6.9: RECUPERAÇÃO
+- Média 7.0 ou superior: APROVADO'''
+
+'''while True:
+    try:
+        n1 = float(input('Digite a primeira nota: '))
+        n2 = float(input('Digite a segunda nota: '))
+        break
+    except ValueError:
+        print('Digite apenas números!')
+
+media = (n1 + n2) / 2
+
+if media < 5:
+    print('Reprovado.')
+elif media < 7:
+    print('Recuperação.')
+else:
+    print('Aprovado.')'''
+
+# exercicio 41
+'''A confederação Nacional de Natação precisa de um programa
+que leia o ano de nascimento de um atleta e mostre sua
+categoria, de acordo com a idade:
+- Até 9 anos: MIRIM
+- Até 14 anos: INFANTIL
+- Até 19 anos: JUNIOR
+- Até 20 anos: SÊNIOR
+- Acima: MASTER'''
+
+from datetime import date
+while True:
+    try:
+        ano = int(input('Qual o ano de nascimento do atleta? '))
+        break
+    except ValueError:
+        print('Digite apenas números!')
+
+idade = date.today().year - ano
+print(f'O atleta tem {idade} anos de idade.')
+if idade <= 9:
+    categoria = 'MIRIM'
+elif idade <= 14:
+    categoria = 'INFANTIL'
+elif idade <= 19:
+    categoria = 'JUNIOR'
+elif idade <= 20:
+    categoria = 'SÊNIOR'
+else:
+    categoria = 'MASTER'
+print(f'Portanto se encaixa na categoria: {categoria}')
+
+# exercicio 42
+'''Refaça o exercicio 35 dos triângulos, acrescentando o recurso
+de mostrar que tipo de triângulo será formado:
+- Equilatero: todos os lados iguais
+- Isóceles: dois lados iguais
+- Escaleno: todos os lados diferentes'''
+
+'''r1 = float(input('Primeira reta: '))
+r2 = float(input('Segunda reta: '))
+r3 = float(input('Terceira reta: '))
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+    print('As retas acima formam um triâgulo.')
+
+    if r1 == r2 == r3:
+        triangulo = 'Equilatero'
+    elif r1 == r2 or r1 == r3 or r2 == r3:
+        triangulo = 'Isóceles'
+    else:
+        triangulo = 'Escaleno'
+
+    print(f'As retas formam um Triângulo {triangulo}.')
+else:
+    print('As retas acima não formam um triângulo.')'''
+
+# exercicio 43
+'''Desenvolva uma lógica que leia o peso e a altura
+de uma pessoa, calcule seu IMC e mostre seu status,
+de acordo com a tabela abaixo:
+- Abaixo de 18.5: Abaixo do peso
+- Entre 18.5 e 25: Peso ideal
+- 25 até 30: Sobrepeso
+- 30 até 40: Obesidade
+- Acima de 40: Obesidade mórbida'''
+
+'''while True:
+    try:
+        peso = float(input('Qual o peso em Kg? '))
+        altura = float(input('Qual a altura em metros? '))
+        break
+    except ValueError:
+        print('Digite apenas números!')
+
+imc = peso / (altura ** 2)
+
+if imc < 18.5:
+    status = 'Abaixo do Peso'
+elif imc < 25:
+    status = 'Peso ideal'
+elif imc < 30:
+    status = 'Sobrepeso'
+elif imc < 40:
+    status = 'Obesidade'
+else:
+    status = 'Obesidade mórbida'
+print(f'Seu IMC é de: {imc:.2f}')
+print(f'Portanto seu status é de: {status}')'''
