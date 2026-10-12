@@ -914,7 +914,7 @@ e mostre um menu como o abaixo na tela:
 Seu programa deverá realizar a operação
 solicitada em cada caso.'''
 
-num = int(input('Digite o primeiro valor: '))
+"""num = int(input('Digite o primeiro valor: '))
 num2 = int(input('Digite o segundo valor: '))
 
 while True:
@@ -955,4 +955,4 @@ Opção: '''))
     else:
         print('Opção inválida. Tente novamente.')
 
-    print('-=' * 20)
+    print('-=' * 20)"""
