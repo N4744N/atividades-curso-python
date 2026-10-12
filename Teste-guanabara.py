@@ -541,7 +541,7 @@ categoria, de acordo com a idade:
 - Até 20 anos: SÊNIOR
 - Acima: MASTER'''
 
-from datetime import date
+'''from datetime import date
 while True:
     try:
         ano = int(input('Qual o ano de nascimento do atleta? '))
@@ -561,7 +561,7 @@ elif idade <= 20:
     categoria = 'SÊNIOR'
 else:
     categoria = 'MASTER'
-print(f'Portanto se encaixa na categoria: {categoria}')
+print(f'Portanto se encaixa na categoria: {categoria}')'''
 
 # exercicio 42
 '''Refaça o exercicio 35 dos triângulos, acrescentando o recurso
@@ -619,3 +619,340 @@ else:
     status = 'Obesidade mórbida'
 print(f'Seu IMC é de: {imc:.2f}')
 print(f'Portanto seu status é de: {status}')'''
+
+# exercicio 44
+'''Elabore um programa que calcule o valor a ser pago por
+um produto, considerando o seu preço normal e condição de pagamento:
+- á vista dinheiro/cheque: 10% de desconto.
+- á vista no cartão: 5% de desconto.
+- em até 2x no cartão: preço normal.
+- 3x ou mais no cartão: 20% de juros.'''
+
+'''valor = float(input('Qual o valor a ser pago? R$'))
+while True:
+    print('\nEscolha a forma de pagamento:')
+    print('[ 1 ] À vista dinheiro/cheque (10% de desconto)')
+    print('[ 2 ] À vista no cartão (5% de desconto)')
+    print('[ 3 ] Em até 2x no cartão (Preço normal)')
+    print('[ 4 ] 3x ou mais no cartão (20% de juros)')
+    
+    opcao = int(input('Sua opção: '))
+
+    if opcao == 1:
+        total = valor - (valor * 0.10)
+        print(f'Você consegue 10% de desconto. De R${valor:.2f} vai para R${total:.2f}!')
+        break
+        
+    elif opcao == 2:
+        total = valor - (valor * 0.05)
+        print(f'Você consegue 5% de desconto. De R${valor:.2f} vai para R${total:.2f}!')
+        break
+        
+    elif opcao == 3:
+        total = valor
+        parcela = total / 2
+        print(f'Sua compra será parcelada em 2x de R${parcela:.2f} SEM JUROS.')
+        print(f'Sua compra vai custar R${total:.2f}.')
+        break
+        
+    elif opcao == 4:
+        total = valor + (valor * 0.20)
+        totparc = int(input('Quantas parcelas? '))
+        parcela = total / totparc
+        print(f'Sua compra será parcelada em {totparc}x de R${parcela:.2f} COM JUROS.')
+        print(f'Sua compra de R${valor:.2f} vai custar R${total:.2f} no final.')
+        break
+        
+    else:
+        print('OPÇÃO INVÁLIDA de pagamento. Tente novamente!')'''
+
+# exercicio 45
+'''Crie um programa que faça o computador jogar JOKEMPÔ com você.'''
+
+'''import random
+def jogar_jokenpo():
+    opcoes = ['pedra', 'papel', 'tesoura']
+
+    while True:
+        print('***JOKEMPO***')
+        print('Suas opções: Pedra, Papel ou Tesoura.')
+        
+        escolha_usuario = input('Sua jogada: ').strip().lower()
+
+        if escolha_usuario in opcoes:
+            break
+ 
+        print('\nOpção inválida! Escolha entre Pedra, Papel ou Tesoura.')
+
+    escolha_pc = random.choice(opcoes)
+    print(f'Computador escolheu: {escolha_pc}')
+
+    if escolha_usuario == escolha_pc:
+        print('Empate!')
+    elif (escolha_usuario == "pedra" and escolha_pc == "tesoura") or (escolha_usuario == "papel" and escolha_pc == "pedra") or (escolha_usuario == "tesoura" and escolha_pc == "papel"):
+        print("\n🎉 VOCÊ VENCEU!")
+    else:
+        print('Computador venceu!')
+
+jogar_jokenpo()'''
+
+# exercicio 46
+'''Faça um programa que mostre na tela uma contagem regressiva para o estouro de fogos de artificio,
+indo de 10 até 0, com uma pausa de 1 segundo entre eles.'''
+
+'''from time import sleep
+for c in range (10, 0, -1):
+    print(c)
+    sleep (1)
+print('BUMMM POWWW CATAPUMMMMMM')'''
+
+# exercicio 47
+'''Crie um programa que mostre na tela todos os números pares
+que estão no intervalo entre 1 e 50.'''
+
+'''for c in range (1, 51):
+    if c %2 == 0:
+        print(c)'''
+
+# exercicio 48
+'''Faça um programa que calcule a soma entre todos os números 
+ímpares que são multiplos de três e que se encontram no intervalo de 1 até 500.'''
+
+'''soma = 0
+numero = int(input('Digite um número que o programa irá somar todos os números que são divisiveis por 3: '))
+for c in range (1, numero+1):
+    if c %3 == 0:
+        soma = soma + c
+print(f'A soma dos números solicitados é igual a: {soma}')'''
+
+# ecercicio 49
+'''Refaça o DESAFIO 009, mostrando a tabuada de um número
+que o usuário escolher, só que agora utilizando um laço for'''
+
+'''n = int(input('Digite um número para ver sua tabuada: '))
+print('-' * 12)
+for c in range (1, 11):
+    print(f'{n} X {c} = {n*c}')
+print('-' * 12)'''
+
+# exercicio 50
+'''Desenvolva um programa que leia seis números inteiros e mostre a soma apenas daqueles
+que forem PARES. Se o valor digitado for ímpar, desconsidere-o.'''
+
+'''soma = 0
+for n in range(1, 7):
+    numero = int(input('Digite um número: '))
+
+    if numero %2 == 0:
+        soma = soma + numero
+print(soma)'''
+
+# exercicio 51
+'''Desenvolva um programa que leia o primeiro termo e a razão
+de uma PA. No final, mostre os 10 primeiros termos dessa progressão.'''
+
+'''termo1 = int(input('Digite o primeiro termo: '))
+razao = int(input('Digite a razão: '))
+termo2 = termo1 + (11 - 1) * razao
+
+for n in range (termo1, termo2, razao):
+    print(f'{n}', end=(', '))
+
+print('Fim')'''
+
+# exercicio 52
+'''Faça um programa que leia um número inteiro e diga se ele
+é ou não um número primo.'''
+
+'''num = int(input('Digite um número: '))
+tot = 0
+for c in range (1, num+1):
+    if num % c == 0:
+        print('\033[33m', end=' ')
+        tot += 1
+    else:
+        print('\033[31m', end=' ')
+    print(f'{c}', end=' ')
+
+print(f'\n\033[mO número {num}, foi divisivel {tot} vezes.')
+if tot == 2:
+    print('Portanto é um número primo!')
+else:
+    print('Portanto não é um número primo!')'''
+
+# exercicio 53
+'''Crie um programa que leia uma frase qualquer e diga se ela é um palindromo,
+desconsiderando os espaços'''
+
+'''frase = str(input('Digite uma frase: ')).strip().upper()
+palavras = frase.split()
+junto = ''.join(palavras)
+inverso = ''
+for letra in range(len(junto) -1, -1, -1):
+    inverso = inverso + junto[letra]
+print(junto, inverso)
+if junto == inverso:
+    print('É um palíndromo!')
+else:
+    print('Não é um palíndromo!')'''
+
+# exercicio 54
+'''Crie um programa que leia o ano de cascimento de 7 pessoas.
+No final, mostre quantas pessoas ainda não atingiram a maioridade
+e quantas ja são de maiores.'''
+
+'''from datetime import date
+hoje = date.today().year
+maior = 0
+menor = 0
+for n in range(1, 8):
+    ano = int(input(f'Em que ano a {n}ª pessoa nasceu? '))
+    idade = hoje - ano
+    if idade >= 18:
+        maior = maior + 1
+    else: menor = menor + 1
+print(f'Na lista temos {maior} pessoas maior de idade e {menor} pessoas menores de idade!')
+'''
+
+# exercicio 55
+'''Faça um programa que leia o peso de 5 pessoas.
+No final, mostre qual foi o maior e o menor peso lidos.'''
+
+'''maior = 0
+menor = 0
+for n in range(1, 6):
+    peso = float(input(f'Qual o peso da {n}ª pessoa? '))
+    if n == 1:
+        maior = peso
+        menor = peso
+    else: 
+        if peso > maior:
+            maior = peso
+        if peso < menor:
+            menor = peso
+print(f'O maior peso foi de {maior}Kg!')
+print(f'O menor peso foi de {menor}Kg!')'''
+
+# exercicio 56
+'''Desenvolva um programa que leia o nome, idade e sexo
+de 4 pessoas. No final do programa, mostre:
+A média de idade do grupo;
+Quantas mulheres tem menos de 20 anos.
+Qual é o nome do homem mais velho.'''
+
+'''media = 0
+mulheres = 0
+maior_idade = 0
+nome_velho = ''
+for p in range(1, 5):
+    print('-' * 25)
+    nome = str(input('Nome: ')).strip().upper()
+    idade = int(input('Idade: '))
+    sexo = str(input('Sexo (M/F): ')).strip().upper()
+    print('-' * 25)
+    if sexo == 'F':
+        if idade < 20:
+            mulheres = mulheres + 1
+    media = media + idade
+
+    if sexo == 'M':
+        if idade > maior_idade:
+            maior_idade = idade
+            nome_velho = nome
+media = media / 4
+
+print(f'A média de idade do grupo é de {media} anos de idade!')
+print(f'Existem {mulheres} mulheres menores de 20 anos na lista!')
+print(f'O homem mais velho se chama {nome_velho}!')'''
+
+# exercicio 57
+'''Faça um programa que leia o sexo de uma
+pessoa, mas só aceite os valores M ou F.
+Caso esteja errado, peça a digitação novamente até ter um valor correto'''
+
+'''sexo = str(input('Informe seu sexo: [M/F] ')).strip().upper()
+while sexo not in 'MF':
+    sexo = str(input('Inválido. Responda com M ou F: ')).strip().upper()
+print(f'Sexo {sexo} registrado com sucesso!')'''
+
+# exercicio 58
+'''Melhore o jogo do desafio 28 onde o computador vai "pensar"
+em um número entre 0 e 10. Só que agora o jogador vai tentar
+adivinhar até acertar, mostrando no final quantos palpites
+foram necessários para vencer.'''
+
+'''from random import randint
+num = randint(0, 10)
+vezes = 1
+
+print('_' * 20)
+print('Pensei em um número de 0 a 10, tente adivinhar...')
+print('_' * 20)
+p = int(input('Em que número eu pensei? '))
+while p != num:
+    if p < num:
+        print('Errou, tente um número maior!')
+    if p > num:
+        print('Errou, tente um número menor!')
+    p = int(input('tente novamente: '))
+    vezes += 1
+    
+if p == num:
+    print('Você acertou, parabens!')
+    print(f'você precisou de {vezes} tentativas para acertar')'''
+
+# exercicio 59
+'''Crie um programa que leia dois valores
+e mostre um menu como o abaixo na tela:
+
+[1] somar
+[2] multiplicar
+[3] maior
+[4] novos números
+[5] sair do programa
+
+Seu programa deverá realizar a operação
+solicitada em cada caso.'''
+
+num = int(input('Digite o primeiro valor: '))
+num2 = int(input('Digite o segundo valor: '))
+
+while True:
+    opcao = int(input('''
+Digite a opção desejada:
+
+[1] somar
+[2] multiplicar
+[3] maior
+[4] novos números
+[5] sair do programa
+
+Opção: '''))
+
+    if opcao == 1:
+        print(f'A soma de {num} e {num2} é igual a: {num + num2}')
+
+    elif opcao == 2:
+        print(f'A multiplicação de {num} e {num2} é igual a: {num * num2}')
+
+    elif opcao == 3:
+        if num > num2:
+            print(f'{num} é o maior valor')
+        elif num2 > num:
+            print(f'{num2} é o maior valor')
+        else:
+            print('Os dois valores são iguais')
+
+    elif opcao == 4:
+        print('Informe os novos números:')
+        num = int(input('Digite o primeiro valor: '))
+        num2 = int(input('Digite o segundo valor: '))
+
+    elif opcao == 5:
+        print('Finalizando...')
+        break
+
+    else:
+        print('Opção inválida. Tente novamente.')
+
+    print('-=' * 20)
